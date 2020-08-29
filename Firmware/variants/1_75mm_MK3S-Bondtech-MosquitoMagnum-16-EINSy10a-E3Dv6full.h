@@ -222,7 +222,8 @@
 
 #define TMC2130_FCLK 12000000       // fclk = 12MHz
 
-#define TMC2130_USTEPS_XY   16        // microstep resolution for XY axes
+#define TMC2130_USTEPS_X    16        // microstep resolution for X axis
+#define TMC2130_USTEPS_Y    16        // microstep resolution for Y axis	
 #define TMC2130_USTEPS_Z    16        // microstep resolution for Z axis
 #define TMC2130_USTEPS_E    16        // microstep resolution for E axis
 #define TMC2130_INTPOL_XY   1         // extrapolate 256 for XY axes
@@ -233,24 +234,44 @@
 #define TMC2130_PWM_AMPL_X  230       // PWMCONF
 #define TMC2130_PWM_AUTO_X  1         // PWMCONF
 #define TMC2130_PWM_FREQ_X  2         // PWMCONF
+#define TMC2130_TOFF_X 3              // TMC2130 off time
+#define TMC2130_HSTR_X 5              // TMC2130 hysteresis
+#define TMC2130_HEND_X 1              // TMC2130 hysteresis low value
+#define TMC2130_TBL_X 2               // TMC2130 blank time
+#define TMC2130_RES_X 0               // TMC2130 native microstep resolution
 
 #define TMC2130_PWM_GRAD_Y  2         // PWMCONF
 #define TMC2130_PWM_AMPL_Y  235       // PWMCONF
 #define TMC2130_PWM_AUTO_Y  1         // PWMCONF
 #define TMC2130_PWM_FREQ_Y  2         // PWMCONF
+#define TMC2130_TOFF_Y 3              // TMC2130 off time
+#define TMC2130_HSTR_Y 5              // TMC2130 hysteresis
+#define TMC2130_HEND_Y 1              // TMC2130 hysteresis low value
+#define TMC2130_TBL_Y 2               // TMC2130 blank time
+#define TMC2130_RES_Y 0               // TMC2130 native microstep resolution
 
 #define TMC2130_PWM_GRAD_Z  4         // PWMCONF
 #define TMC2130_PWM_AMPL_Z  200       // PWMCONF
 #define TMC2130_PWM_AUTO_Z  1         // PWMCONF
 #define TMC2130_PWM_FREQ_Z  2         // PWMCONF
+#define TMC2130_TOFF_Z 3              // TMC2130 off time
+#define TMC2130_HSTR_Z 5              // TMC2130 hysteresis
+#define TMC2130_HEND_Z 1              // TMC2130 hysteresis low value
+#define TMC2130_TBL_Z 2               // TMC2130 blank time
+#define TMC2130_RES_Z 0               // TMC2130 native microstep resolution
 
 #define TMC2130_PWM_GRAD_E  4         // PWMCONF
 #define TMC2130_PWM_AMPL_E  240       // PWMCONF
 #define TMC2130_PWM_AUTO_E  1         // PWMCONF
 #define TMC2130_PWM_FREQ_E  2         // PWMCONF
+#define TMC2130_TOFF_E 3              // TMC2130 off time
+#define TMC2130_HSTR_E 5              // TMC2130 hysteresis
+#define TMC2130_HEND_E 1              // TMC2130 hysteresis low value
+#define TMC2130_TBL_E 2               // TMC2130 blank time
+#define TMC2130_RES_E 0               // TMC2130 native microstep resolution
 
-#define TMC2130_TOFF_XYZ    3         // CHOPCONF // fchop = 27.778kHz
-#define TMC2130_TOFF_E      3         // CHOPCONF // fchop = 27.778kHz
+//#define TMC2130_TOFF_XYZ    3         // CHOPCONF // fchop = 27.778kHz
+//#define TMC2130_TOFF_E      3         // CHOPCONF // fchop = 27.778kHz
 //#define TMC2130_TOFF_E      4         // CHOPCONF // fchop = 21.429kHz
 //#define TMC2130_TOFF_E      5         // CHOPCONF // fchop = 17.442kHz
 

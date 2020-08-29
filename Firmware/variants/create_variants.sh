@@ -57,6 +57,26 @@ sed -i -e 's/#define UNLOAD_FILAMENT_1 "G1 E-80 F7000"*/#define UNLOAD_FILAMENT_
 sed -i -e 's/#define FILAMENTCHANGE_FINALRETRACT -80*/#define FILAMENTCHANGE_FINALRETRACT -100/' ${VARIANT}
 sed -i -e 's/#define FILAMENTCHANGE_FINALFEED 25*/#define FILAMENTCHANGE_FINALFEED 35/' ${VARIANT}
 
+## 0.9 Degree XY
+VARIANT="1_75mm_MK3S-0_9XY-EINSy10a-E3Dv6full.h"
+cp ${BASE} ${VARIANT}
+sed -i -e 's/#define HOMING_FEEDRATE {3000, 3000,*/#define HOMING_FEEDRATE {2400, 2500,/' ${VARIANT}
+sed -i -e 's/#define TMC2130_USTEPS_X    16*/#define TMC2130_USTEPS_X    8 /' ${VARIANT}
+sed -i -e 's/#define TMC2130_USTEPS_Y    16*/#define TMC2130_USTEPS_Y    8 /' ${VARIANT}
+sed -i -e 's/#define TMC2130_PWM_GRAD_X  2*/#define TMC2130_PWM_GRAD_X  4/' ${VARIANT}
+sed -i -e 's/#define TMC2130_PWM_AMPL_X  230*/#define TMC2130_PWM_AMPL_X  235/' ${VARIANT}
+sed -i -e 's/#define TMC2130_TOFF_X 3*/#define TMC2130_TOFF_X 2/' ${VARIANT}
+sed -i -e 's/#define TMC2130_HSTR_X 5*/#define TMC2130_HSTR_X 2/' ${VARIANT}
+sed -i -e 's/#define TMC2130_HEND_X 1*/#define TMC2130_HEND_X 0/' ${VARIANT}
+sed -i -e 's/#define TMC2130_PWM_GRAD_Y  2*/#define TMC2130_PWM_GRAD_Y  4/' ${VARIANT}
+sed -i -e 's/#define TMC2130_PWM_AMPL_Y  235*/#define TMC2130_PWM_AMPL_Y  250/' ${VARIANT}
+sed -i -e 's/#define TMC2130_TOFF_Y 3*/#define TMC2130_TOFF_Y 2/' ${VARIANT}
+sed -i -e 's/#define TMC2130_HSTR_Y 5*/#define TMC2130_HSTR_Y 2/' ${VARIANT}
+sed -i -e 's/#define TMC2130_HEND_Y 1*/#define TMC2130_HEND_Y 0/' ${VARIANT}
+sed -i -e 's/#define TMC2130_SG_THRS_X       3*/#define TMC2130_SG_THRS_X       4/' ${VARIANT}
+sed -i -e 's/#define TMC2130_SG_THRS_Y       3*/#define TMC2130_SG_THRS_Y       4/' ${VARIANT}
+sed -i -e 's/#define TMC2130_SG_THRS_HOME {3, 3,*/#define TMC2130_SG_THRS_HOME {4, 4,/' ${VARIANT}
+sed -i -e 's/#define TMC2130_CURRENTS_R_HOME {8, 10,*/#define TMC2130_CURRENTS_R_HOME {10, 12,/' ${VARIANT}
 ##### MK2.5S Variants
 #### RAMBo13a
 ## Bear
